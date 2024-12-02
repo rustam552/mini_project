@@ -1,0 +1,38 @@
+
+psql -U Rustam
+
+
+CREATE TABLE Timetable (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(255),
+    instructor VARCHAR(255),
+    day VARCHAR(50),
+    time VARCHAR(50),
+    room VARCHAR(50),
+    building VARCHAR(255),
+    campus VARCHAR(255),
+    level_course VARCHAR(50),
+    level INT
+);
+
+
+INSERT INTO Timetable (course_name, instructor, day, time, room, building, campus, level_course, level) VALUES
+('Operating Systems', 'Boeva, Sok', 'Monday', '4:30 PM', '304', 'North Hall Classrooms', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 1),
+('Social Engineering and Systems Analysis', 'Guseynov', 'Thursday', '11:30 AM', '406', 'North Hall Classrooms', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 1),
+('Science in the News', 'Attanayake', 'Friday', '4:30 PM', 'WebNet+', 'WebNet+', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 1),
+('Writing in the Workplace', 'Abdumanov, Shoxrux', 'Monday', '4:20 PM', 'Room 105', 'North Hall Classrooms', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore',  2),
+('Computer Languages', 'Bekov, San', 'Wednesday', '2:00 PM', '114', 'North Hall Classrooms', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 2),
+('Media, Diversity and Society', 'Isner, Vin', 'Wednesday', '7:00 PM', 'WebNet+', 'WebNet+', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 3);
+
+
+CREATE TABLE Students (
+    student_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    classification VARCHAR(50),
+    major VARCHAR(255),
+    advisor VARCHAR(255)
+);
+
+
+INSERT INTO Students (name, classification, major, advisor) VALUES
+('Rustam Yakubov', 'Sophomore', 'COSC - Computer Science', 'Abdumanov, Shoxrux');
